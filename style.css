@@ -1,0 +1,138 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #87CEEB, #FFD700); /* skyish blue to yellow */
+}
+
+.game {
+    overflow: hidden;
+    position: relative;
+}
+
+button {
+    position: fixed;
+    margin-top: 1px;
+    margin-bottom: 4px;
+    padding: 10px 20px; /* Add padding for all buttons */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+button:active {
+    background-color: #3e8e41; /* Even darker green when clicked */
+    transform: translateY(0); /* Remove lift on click */
+}
+
+.nftTotalScore {
+    position: absolute;
+    font-size: 3vmin;
+    right: 30vmin;
+    top: 4vmin;
+}
+
+.gweiTotalScore {
+    position: absolute;
+    font-size: 3vmin;
+    right: 30vmin;
+    top: 1vmin;
+}
+
+.score {
+    position: absolute;
+    font-size: 3vmin;
+    right: 1vmin;
+    top: 1vmin;
+}
+
+.button1 {
+    position: absolute;
+    font-size: 3vmin;
+    left: 1vmin;
+    top: 1vmin;
+    margin-bottom: 4px; /* Add gap */
+}
+
+.button2 {
+    position: absolute;
+    font-size: 3vmin;
+    left: 1vmin;
+    top: 6vmin;
+    margin-bottom: 4px; /* Add gap */
+}
+
+.button3 {
+    position: absolute;
+    font-size: 3vmin;
+    left: 1vmin;
+    top: 11vmin;
+    margin-bottom: 4px; /* Add gap */
+}
+
+.score1 {
+    position: absolute;
+    font-size: 3vmin;
+    right: 1vmin;
+    top: 4vmin;
+}
+
+.start-screen {
+    position: absolute;
+    font-size: 5vmin;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hide {
+    display: none;
+}
+
+.ground {
+    --left: 0;
+    position: absolute;
+    width: 300%;
+    bottom: 0;
+    left: calc(var(--left) * 1%);
+}
+
+.player {
+    --bottom: 0;
+    position: absolute;
+    left: 1%;
+    height: 30%;
+    bottom: calc(var(--bottom) * 1%);
+}
+
+.obstacle {
+    position: absolute;
+    left: calc(var(--left) * 1%);
+    height: 30%;
+    bottom: 0;
+}
+
+.nft {
+    position: absolute;
+    left: calc(var(--left) * 1%);
+    height: 30%;
+    bottom: 100px;
+}
